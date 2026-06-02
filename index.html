@@ -9,14 +9,15 @@
 body{
     margin:0;
     font-family: Arial;
-    background:#f6f8fb;
+    background:#F6F8FB;
+    color:#333;
 }
 
-/* 顶部横幅 */
+/* HERO（LearningPool风格） */
 .hero{
-    background:linear-gradient(120deg,#1e2a44,#2f3b5b);
+    background:linear-gradient(120deg,#1E2A44,#2F3B5B);
     color:white;
-    padding:50px 20px;
+    padding:55px 20px;
     text-align:center;
 }
 
@@ -34,26 +35,28 @@ body{
     display:inline-block;
     margin-top:15px;
     padding:10px 18px;
-    background:#4caf50;
+    background:#4CAF50;
     color:white;
     border-radius:6px;
     text-decoration:none;
+    font-weight:bold;
 }
 
-/* 区块 */
+/* 页面容器 */
 .section{
     max-width:1000px;
     margin:auto;
     padding:20px;
 }
 
-/* 卡片 */
+/* 卡片（企业级学习平台风格） */
 .card{
     background:white;
-    padding:15px;
-    margin:10px 0;
+    padding:18px;
+    margin:12px 0;
     border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    box-shadow:0 2px 10px rgba(30,42,68,0.08);
+    border:1px solid #E6EAF0;
 }
 
 /* 学习路径 */
@@ -64,7 +67,7 @@ body{
 }
 
 .path div{
-    background:#1e2a44;
+    background:#1E2A44;
     color:white;
     padding:8px 12px;
     border-radius:20px;
@@ -72,27 +75,71 @@ body{
 }
 
 /* 按钮 */
-a.btn{
+a.button{
     display:inline-block;
-    margin-top:8px;
-    padding:6px 10px;
-    background:#1e2a44;
+    margin:5px 0;
+    padding:8px 12px;
+    background:#1E2A44;
     color:white;
     border-radius:6px;
     text-decoration:none;
     font-size:13px;
+    transition:0.2s;
 }
 
-/* 班级进度条 */
+a.button:hover{
+    background:#2F3B5B;
+}
+
+/* 进度条 */
 .bar{
-    background:#eee;
+    background:#E9EDF3;
     height:8px;
     border-radius:20px;
+    overflow:hidden;
+    margin-bottom:10px;
 }
 
 .fill{
     height:8px;
-    background:#4caf50;
+    background:#4CAF50;
+}
+
+/* tabs */
+.tabs{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.tab{
+    padding:8px 12px;
+    margin:5px;
+    background:#E6EAF0;
+    border-radius:20px;
+    cursor:pointer;
+    font-size:13px;
+}
+
+.tab.active{
+    background:#1E2A44;
+    color:white;
+}
+
+/* 内容显示 */
+.tab-content{
+    display:none;
+}
+
+.tab-content.active{
+    display:block;
+}
+
+/* footer */
+footer{
+    text-align:center;
+    padding:20px;
+    font-size:12px;
+    color:#777;
 }
 </style>
 </head>
@@ -102,7 +149,7 @@ a.btn{
 <!-- HERO -->
 <div class="hero">
 <h1>康老师汉语学习中心</h1>
-<p>HSK教学辅助平台 · 学习汉语 · 了解中国</p>
+<p>HSK教学辅助平台 · 专业汉语学习系统</p>
 <a href="#course">开始学习</a>
 </div>
 
@@ -130,7 +177,8 @@ a.btn{
 <div class="bar"><div class="fill" style="width:33%"></div></div>
 
 </div>
-<!-- 课程中心（已连接你的课） -->
+
+<!-- 课程中心 -->
 <div class="card" id="course">
 <h2>📚 课程中心</h2>
 
@@ -145,23 +193,7 @@ a.btn{
 
 <a class="button" href="https://kanglaoshi.github.io/HSK1_5.dilfuza/" target="_blank">第1课</a><br>
 <a class="button" href="https://kanglaoshi.github.io/HSK1_6hui.dilfuza/" target="_blank">第2课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK1_6hui.dilfuza/" target="_blank">第3课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK1_6hui.dilfuza/" target="_blank">第3课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK1_6hui.dilfuza/" target="_blank">第3课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK1_6hui.dilfuza/" target="_blank">第3课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK1_6hui.dilfuza/" target="_blank">第3课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK1_6hui.dilfuza/" target="_blank">第3课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK1_6hui.dilfuza/" target="_blank">第3课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK1_6hui.dilfuza/" target="_blank">第3课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK1_6hui.dilfuza/" target="_blank">第3课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK1_6hui.dilfuza/" target="_blank">第3课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK1_6hui.dilfuza/" target="_blank">第3课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK1_6hui.dilfuza/" target="_blank">第3课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK1_6hui.dilfuza/" target="_blank">第3课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK1_6hui.dilfuza/" target="_blank">第3课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK1_6hui.dilfuza/" target="_blank">第3课</a><br>
-
-
+<a class="button" href="#">第3课</a><br>
 
 </div>
 
@@ -169,26 +201,7 @@ a.btn{
 <div id="hsk2" class="tab-content">
 
 <a class="button" href="https://kanglaoshi.github.io/HSK2_1jiu.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK2_1jiu.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK2_1jiu.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK2_1jiu.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK2_1jiu.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK2_1jiu.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK2_1jiu.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK2_1jiu.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK2_1jiu.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK2_1jiu.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK2_1jiu.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK2_1jiu.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK2_1jiu.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK2_1jiu.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK2_1jiu.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK2_1jiu.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK2_1jiu.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK2_1jiu.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK2_1jiu.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK2_1jiu.dilfuza/" target="_blank">第1课</a><br>
-
+<a class="button" href="https://kanglaoshi.github.io/HSK2_7.dilfuza/" target="_blank">第7课</a><br>
 
 </div>
 
@@ -196,29 +209,13 @@ a.btn{
 <div id="hsk3" class="tab-content">
 
 <a class="button" href="https://kanglaoshi.github.io/HSK3_1dasuan.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK3_1dasuan.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK3_1dasuan.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK3_1dasuan.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK3_1dasuan.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK3_1dasuan.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK3_1dasuan.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK3_1dasuan.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK3_1dasuan.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK3_1dasuan.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK3_1dasuan.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK3_1dasuan.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK3_1dasuan.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK3_1dasuan.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK3_1dasuan.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK3_1dasuan.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK3_1dasuan.dilfuza/" target="_blank">第1课</a><br>
 
 </div>
 
 </div>
 
 <!-- HSK3.0 -->
-<div class="card" id="hsk30">
+<div class="card">
 <h2>📖 HSK 3.0 系统</h2>
 
 <div class="tabs">
@@ -242,20 +239,21 @@ a.btn{
 </div>
 
 <footer>
-© 康老师汉语学习中心 | GitHub Pages 教学平台
+© 康老师汉语学习中心 | Learning Platform
 </footer>
 
 <script>
 function showTab(id){
 
-    let contents = document.querySelectorAll(".tab-content");
-    contents.forEach(c => c.classList.remove("active"));
+    document.querySelectorAll(".tab-content").forEach(e=>{
+        e.classList.remove("active");
+    });
 
-    let tabs = document.querySelectorAll(".tab");
-    tabs.forEach(t => t.classList.remove("active"));
+    document.querySelectorAll(".tab").forEach(e=>{
+        e.classList.remove("active");
+    });
 
     document.getElementById(id).classList.add("active");
-
     event.target.classList.add("active");
 }
 </script>
