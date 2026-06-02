@@ -9,15 +9,14 @@
 body{
     margin:0;
     font-family: Arial;
-    background:#F6F8FB;
-    color:#333;
+    background:#f6f8fb;
 }
 
-/* HERO（LearningPool风格） */
+/* 顶部横幅 */
 .hero{
-    background:linear-gradient(120deg,#1E2A44,#2F3B5B);
+    background:linear-gradient(120deg,#1e2a44,#2f3b5b);
     color:white;
-    padding:55px 20px;
+    padding:50px 20px;
     text-align:center;
 }
 
@@ -35,28 +34,26 @@ body{
     display:inline-block;
     margin-top:15px;
     padding:10px 18px;
-    background:#4CAF50;
+    background:#4caf50;
     color:white;
     border-radius:6px;
     text-decoration:none;
-    font-weight:bold;
 }
 
-/* 页面容器 */
+/* 区块 */
 .section{
     max-width:1000px;
     margin:auto;
     padding:20px;
 }
 
-/* 卡片（企业级学习平台风格） */
+/* 卡片 */
 .card{
     background:white;
-    padding:18px;
-    margin:12px 0;
+    padding:15px;
+    margin:10px 0;
     border-radius:10px;
-    box-shadow:0 2px 10px rgba(30,42,68,0.08);
-    border:1px solid #E6EAF0;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
 }
 
 /* 学习路径 */
@@ -67,7 +64,7 @@ body{
 }
 
 .path div{
-    background:#1E2A44;
+    background:#1e2a44;
     color:white;
     padding:8px 12px;
     border-radius:20px;
@@ -75,71 +72,27 @@ body{
 }
 
 /* 按钮 */
-a.button{
+a.btn{
     display:inline-block;
-    margin:5px 0;
-    padding:8px 12px;
-    background:#1E2A44;
+    margin-top:8px;
+    padding:6px 10px;
+    background:#1e2a44;
     color:white;
     border-radius:6px;
     text-decoration:none;
     font-size:13px;
-    transition:0.2s;
 }
 
-a.button:hover{
-    background:#2F3B5B;
-}
-
-/* 进度条 */
+/* 班级进度条 */
 .bar{
-    background:#E9EDF3;
+    background:#eee;
     height:8px;
     border-radius:20px;
-    overflow:hidden;
-    margin-bottom:10px;
 }
 
 .fill{
     height:8px;
-    background:#4CAF50;
-}
-
-/* tabs */
-.tabs{
-    display:flex;
-    flex-wrap:wrap;
-}
-
-.tab{
-    padding:8px 12px;
-    margin:5px;
-    background:#E6EAF0;
-    border-radius:20px;
-    cursor:pointer;
-    font-size:13px;
-}
-
-.tab.active{
-    background:#1E2A44;
-    color:white;
-}
-
-/* 内容显示 */
-.tab-content{
-    display:none;
-}
-
-.tab-content.active{
-    display:block;
-}
-
-/* footer */
-footer{
-    text-align:center;
-    padding:20px;
-    font-size:12px;
-    color:#777;
+    background:#4caf50;
 }
 </style>
 </head>
@@ -149,7 +102,7 @@ footer{
 <!-- HERO -->
 <div class="hero">
 <h1>康老师汉语学习中心</h1>
-<p>HSK教学辅助平台 · 专业汉语学习系统</p>
+<p>HSK教学辅助平台 · 学习汉语 · 了解中国</p>
 <a href="#course">开始学习</a>
 </div>
 
@@ -178,85 +131,34 @@ footer{
 
 </div>
 
-<!-- 课程中心 -->
+<!-- 课程入口 -->
 <div class="card" id="course">
-<h2>📚 课程中心</h2>
+<h2>📚 课程入口</h2>
 
-<div class="tabs">
-<div class="tab active" onclick="showTab('hsk1')">HSK1</div>
-<div class="tab" onclick="showTab('hsk2')">HSK2</div>
-<div class="tab" onclick="showTab('hsk3')">HSK3</div>
-</div>
-
-<!-- HSK1 -->
-<div id="hsk1" class="tab-content active">
-
-<a class="button" href="https://kanglaoshi.github.io/HSK1_5.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK1_6hui.dilfuza/" target="_blank">第2课</a><br>
-<a class="button" href="#">第3课</a><br>
-
-</div>
-
-<!-- HSK2 -->
-<div id="hsk2" class="tab-content">
-
-<a class="button" href="https://kanglaoshi.github.io/HSK2_1jiu.dilfuza/" target="_blank">第1课</a><br>
-<a class="button" href="https://kanglaoshi.github.io/HSK2_7.dilfuza/" target="_blank">第7课</a><br>
-
-</div>
-
-<!-- HSK3 -->
-<div id="hsk3" class="tab-content">
-
-<a class="button" href="https://kanglaoshi.github.io/HSK3_1dasuan.dilfuza/" target="_blank">第1课</a><br>
-
-</div>
+<p>HSK2 第7课</p>
+<a class="btn" href="https://kanglaoshi.github.io/HSK2_7.dilfuza/" target="_blank">
+进入课程
+</a>
 
 </div>
 
 <!-- HSK3.0 -->
 <div class="card">
-<h2>📖 HSK 3.0 系统</h2>
-
-<div class="tabs">
-<div class="tab active" onclick="showTab('s1')">3.0-1</div>
-<div class="tab" onclick="showTab('s2')">3.0-2</div>
-<div class="tab" onclick="showTab('s3')">3.0-3</div>
-<div class="tab" onclick="showTab('s4')">3.0-4</div>
-<div class="tab" onclick="showTab('s5')">3.0-5</div>
-<div class="tab" onclick="showTab('s6')">3.0-6</div>
+<h2>📖 HSK 3.0</h2>
+<p>分级学习系统（1 - 6级）</p>
+<a class="btn" href="#">进入HSK3.0</a>
 </div>
 
-<div id="s1" class="tab-content active">HSK3.0-1资料</div>
-<div id="s2" class="tab-content">HSK3.0-2资料</div>
-<div id="s3" class="tab-content">HSK3.0-3资料</div>
-<div id="s4" class="tab-content">HSK3.0-4资料</div>
-<div id="s5" class="tab-content">HSK3.0-5资料</div>
-<div id="s6" class="tab-content">HSK3.0-6资料</div>
+<!-- 其他 -->
+<div class="card">
+<h2>🎵 汉语歌曲</h2>
+</div>
 
+<div class="card">
+<h2>🏆 学生作品</h2>
 </div>
 
 </div>
-
-<footer>
-© 康老师汉语学习中心 | Learning Platform
-</footer>
-
-<script>
-function showTab(id){
-
-    document.querySelectorAll(".tab-content").forEach(e=>{
-        e.classList.remove("active");
-    });
-
-    document.querySelectorAll(".tab").forEach(e=>{
-        e.classList.remove("active");
-    });
-
-    document.getElementById(id).classList.add("active");
-    event.target.classList.add("active");
-}
-</script>
 
 </body>
 </html>
