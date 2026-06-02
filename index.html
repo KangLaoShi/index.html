@@ -7,103 +7,74 @@
 
 <style>
 body{
-    font-family: Arial, sans-serif;
     margin:0;
-    background:#f5f7fb;
-    color:#333;
+    font-family: Arial;
+    background:#f6f8fb;
 }
 
-header{
-    background:#1e2a44;
+/* 顶部横幅 */
+.hero{
+    background:linear-gradient(120deg,#1e2a44,#2f3b5b);
     color:white;
-    padding:20px;
+    padding:50px 20px;
     text-align:center;
 }
 
-header h1{
+.hero h1{
+    font-size:28px;
     margin:0;
-    font-size:22px;
 }
 
-nav{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    background:#2f3b5b;
+.hero p{
+    margin-top:10px;
+    opacity:0.9;
 }
 
-nav a{
+.hero a{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 18px;
+    background:#4caf50;
     color:white;
-    padding:12px 15px;
+    border-radius:6px;
     text-decoration:none;
-    font-size:14px;
 }
 
-nav a:hover{
-    background:#44557a;
-}
-
-.container{
+/* 区块 */
+.section{
     max-width:1000px;
     margin:auto;
-    padding:15px;
+    padding:20px;
 }
 
+/* 卡片 */
 .card{
     background:white;
     padding:15px;
     margin:10px 0;
     border-radius:10px;
-    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
 }
 
-h2{
-    font-size:18px;
-}
-
-.progress-bar{
-    background:#eee;
-    height:10px;
-    border-radius:20px;
-    overflow:hidden;
-    margin:5px 0 10px;
-}
-
-.progress{
-    height:10px;
-    background:#4caf50;
-}
-
-.tabs{
+/* 学习路径 */
+.path{
     display:flex;
     flex-wrap:wrap;
+    gap:10px;
 }
 
-.tab{
+.path div{
+    background:#1e2a44;
+    color:white;
     padding:8px 12px;
-    margin:5px;
-    background:#ddd;
     border-radius:20px;
-    cursor:pointer;
     font-size:13px;
 }
 
-.tab.active{
-    background:#1e2a44;
-    color:white;
-}
-
-.tab-content{
-    display:none;
-}
-
-.tab-content.active{
-    display:block;
-}
-
-a.button{
+/* 按钮 */
+a.btn{
     display:inline-block;
-    margin:5px 0;
+    margin-top:8px;
     padding:6px 10px;
     background:#1e2a44;
     color:white;
@@ -112,58 +83,53 @@ a.button{
     font-size:13px;
 }
 
-footer{
-    text-align:center;
-    padding:15px;
-    font-size:12px;
-    color:#777;
+/* 班级进度条 */
+.bar{
+    background:#eee;
+    height:8px;
+    border-radius:20px;
+}
+
+.fill{
+    height:8px;
+    background:#4caf50;
 }
 </style>
 </head>
 
 <body>
 
-<header>
+<!-- HERO -->
+<div class="hero">
 <h1>康老师汉语学习中心</h1>
-<p>HSK教学辅助平台（班级 + 课程 + HSK3.0）</p>
-</header>
+<p>HSK教学辅助平台 · 学习汉语 · 了解中国</p>
+<a href="#course">开始学习</a>
+</div>
 
-<nav>
-<a href="#">首页</a>
-<a href="#class">班级进度</a>
-<a href="#course">课程中心</a>
-<a href="#hsk30">HSK 3.0</a>
-</nav>
+<div class="section">
 
-<div class="container">
-
-<!-- 通知 -->
+<!-- 学习路径 -->
 <div class="card">
-<h2>📢 课程通知</h2>
-<p>请同学按照班级进入对应课程学习，完成作业并按时复习。</p>
+<h2>📌 学习路径</h2>
+<div class="path">
+<div>HSK1</div>
+<div>HSK2</div>
+<div>HSK3</div>
+<div>HSK3.0</div>
+</div>
 </div>
 
 <!-- 班级进度 -->
-<div class="card" id="class">
+<div class="card">
 <h2>📊 班级进度</h2>
 
-<p>HSK1-A班</p>
-<div class="progress-bar"><div class="progress" style="width:80%"></div></div>
-
-<p>HSK1-B班</p>
-<div class="progress-bar"><div class="progress" style="width:67%"></div></div>
-
 <p>HSK2-A班</p>
-<div class="progress-bar"><div class="progress" style="width:47%"></div></div>
+<div class="bar"><div class="fill" style="width:47%"></div></div>
 
 <p>HSK2-B班</p>
-<div class="progress-bar"><div class="progress" style="width:33%"></div></div>
-
-<p>HSK3班</p>
-<div class="progress-bar"><div class="progress" style="width:40%"></div></div>
+<div class="bar"><div class="fill" style="width:33%"></div></div>
 
 </div>
-
 <!-- 课程中心（已连接你的课） -->
 <div class="card" id="course">
 <h2>📚 课程中心</h2>
