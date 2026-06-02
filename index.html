@@ -5,18 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>康老师汉语学习中心</title>
 
-<style>
 body{
     margin:0;
     font-family: Arial;
-    background:#f6f8fb;
+    background:#F8FAFC;
+    color:#0F172A;
 }
 
-/* 顶部横幅 */
+/* HERO */
 .hero{
-    background:linear-gradient(120deg,#1e2a44,#2f3b5b);
+    background:linear-gradient(120deg,#4F46E5,#6366F1);
     color:white;
-    padding:50px 20px;
+    padding:55px 20px;
     text-align:center;
 }
 
@@ -34,26 +34,28 @@ body{
     display:inline-block;
     margin-top:15px;
     padding:10px 18px;
-    background:#4caf50;
+    background:#22C55E;
     color:white;
-    border-radius:6px;
+    border-radius:8px;
     text-decoration:none;
+    font-weight:bold;
 }
 
-/* 区块 */
+/* 页面容器 */
 .section{
     max-width:1000px;
     margin:auto;
     padding:20px;
 }
 
-/* 卡片 */
+/* 卡片（更现代） */
 .card{
     background:white;
-    padding:15px;
-    margin:10px 0;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    padding:18px;
+    margin:12px 0;
+    border-radius:14px;
+    border:1px solid #E2E8F0;
+    box-shadow:0 6px 18px rgba(15,23,42,0.06);
 }
 
 /* 学习路径 */
@@ -64,7 +66,7 @@ body{
 }
 
 .path div{
-    background:#1e2a44;
+    background:#4F46E5;
     color:white;
     padding:8px 12px;
     border-radius:20px;
@@ -72,27 +74,62 @@ body{
 }
 
 /* 按钮 */
-a.btn{
+a.button{
     display:inline-block;
-    margin-top:8px;
-    padding:6px 10px;
-    background:#1e2a44;
+    margin:5px 0;
+    padding:8px 12px;
+    background:#4F46E5;
     color:white;
-    border-radius:6px;
+    border-radius:8px;
     text-decoration:none;
     font-size:13px;
+    transition:0.2s;
 }
 
-/* 班级进度条 */
+a.button:hover{
+    background:#6366F1;
+}
+
+/* 进度条 */
 .bar{
-    background:#eee;
+    background:#E2E8F0;
     height:8px;
     border-radius:20px;
+    overflow:hidden;
 }
 
 .fill{
     height:8px;
-    background:#4caf50;
+    background:#22C55E;
+}
+
+/* tabs */
+.tabs{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.tab{
+    padding:8px 12px;
+    margin:5px;
+    background:#E2E8F0;
+    border-radius:20px;
+    cursor:pointer;
+    font-size:13px;
+    transition:0.2s;
+}
+
+.tab.active{
+    background:#4F46E5;
+    color:white;
+}
+
+/* footer */
+footer{
+    text-align:center;
+    padding:20px;
+    font-size:12px;
+    color:#64748B;
 }
 </style>
 </head>
